@@ -12,15 +12,22 @@
 #card
 {
     width: 40%;
-    height: 50rem;
+    height: 30rem;
 }
 
 
 
+#body
+{
+    background-image: linear-gradient(to right, #373B44, #4286f4);
+}
 #main-container
 {
+    padding-top: 10rem;
     height: 50rem;
     border: solid 1px;
+    display: flex;
+    justify-content: center;
 }
 
 #form-container
@@ -35,4 +42,10 @@
     border: solid 1px;
     display: flex;
     justify-content: center;
+}
+
+#gross-pay-container
+{
+    margin-top: 2rem;
+    border: solid 1px;
 }
