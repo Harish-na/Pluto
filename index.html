@@ -6,12 +6,12 @@
 
 
 
-<body>
+<body id='body'>
     <div class="container" id="main-container">
         <div class="card" id="card">
             <div class="card-content" id="card-content">
                 <div class="content">
-                    Hello my name is Harish
+                    <strong>PAY CHECKER</strong>
                 </div>
             </div>
 
@@ -49,6 +49,9 @@
                     <button class="button is-link" id="button">Calculate</button>
                 </div>
                 
+                <div class="container" id="gross-pay-container">
+
+                </div>
             </div>
         </div>
     </div>
@@ -63,7 +66,8 @@
 let button = document.getElementById('button')
 button.addEventListener("click", function()
 {
-    getPay()
+    let pay = getPay()
+    changeFormat(pay)
 })
 
 
@@ -81,7 +85,19 @@ function getPay()
 
     let gross_pay = four_pay + six_pay + nine_pay
 
-    return gross_pay
+    return gross_pay.toFixed(2)
+}
+
+
+function changeFormat(pay)
+{
+    let card = document.getElementById('card')
+    card.style = "height: 35rem"
+
+    let result = document.getElementById('gross-pay-container')
+    let text = document.createElement("p")
+    text.innerHTML = ("Approximate Gross Pay: €" + pay)
+    result.appendChild(text)
 }
 </script>
 
