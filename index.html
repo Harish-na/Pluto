@@ -1,0 +1,89 @@
+<html>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+<link rel="stylesheet" href="style.css">
+
+<title>Pay Checker</title>
+
+
+
+<body>
+    <div class="container" id="main-container">
+        <div class="card" id="card">
+            <div class="card-content" id="card-content">
+                <div class="content">
+                    Hello my name is Harish
+                </div>
+            </div>
+
+            <div class="container" id="form-container">
+                <div class="field">
+                    <p><strong>Hourly Rate</strong></p>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Hourly Rate" id="hourly-rate">
+                    </div>
+                </div>
+
+
+                <div class="field">
+                    <p><strong>4 Hour Shifts:</strong></p>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="4 Hour Shifts" id="four-hours">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p><strong>6 Hour Shifts:</strong></p>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="6 Hour Shifts" id="six-hours">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p><strong>9 Hour Shifts:</strong></p>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="9 Hour Shifts" id="nine-hours">
+                    </div>
+                </div>
+
+                <div class="container" id="button-container">
+                    <button class="button is-link" id="button">Calculate</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+
+
+
+let button = document.getElementById('button')
+button.addEventListener("click", function()
+{
+    getPay()
+})
+
+
+function getPay()
+{
+    let hourly_rate = parseFloat(document.getElementById('hourly-rate').value)
+    let fours = parseInt(document.getElementById('four-hours').value)
+    let sixes = parseInt(document.getElementById('six-hours').value)
+    let nines = parseInt(document.getElementById('nine-hours').value)
+
+
+    let four_pay = (fours * 4) * hourly_rate
+    let six_pay = (sixes * 6) * hourly_rate
+    let nine_pay = (nines * 8) * hourly_rate
+
+    let gross_pay = four_pay + six_pay + nine_pay
+
+    return gross_pay
+}
+</script>
+
+</html>
+
