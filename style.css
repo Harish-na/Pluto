@@ -1,0 +1,38 @@
+
+
+
+#card-content
+{
+    width: 50%;
+    text-align: center;
+    border: solid 1px;
+    margin: auto;
+}
+
+#card
+{
+    width: 40%;
+    height: 50rem;
+}
+
+
+
+#main-container
+{
+    height: 50rem;
+    border: solid 1px;
+}
+
+#form-container
+{
+    margin-top: 2rem;
+    border: solid 1px;
+    width: 15rem;
+}
+
+#button-container
+{
+    border: solid 1px;
+    display: flex;
+    justify-content: center;
+}
