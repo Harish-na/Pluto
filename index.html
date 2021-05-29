@@ -95,10 +95,26 @@ function changeFormat(pay)
     card.style = "height: 35rem"
 
     let result = document.getElementById('gross-pay-container')
+
     let text = document.createElement("p")
-    text.innerHTML = ("Approximate Gross Pay: €" + pay)
+
+    let text_italic = document.createElement("i")
+    text_italic.innerHTML = "Approximate Gross Pay: "
+    text.appendChild(text_italic)
+
+
+    let text2 = document.createElement()
     result.appendChild(text)
 }
+
+/**
+ * <p>
+ * <i>
+ * <strong>
+ * </strong>
+ * </i>
+ * </p>
+ **/
 </script>
 
 </html>
