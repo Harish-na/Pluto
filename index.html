@@ -67,7 +67,12 @@ let button = document.getElementById('button')
 button.addEventListener("click", function()
 {
     let pay = getPay()
-    changeFormat(pay)
+
+    let res = document.getElementById("result")
+    
+    if (res == null){
+        changeFormat(pay)
+    }
 })
 
 
@@ -97,24 +102,19 @@ function changeFormat(pay)
     let result = document.getElementById('gross-pay-container')
 
     let text = document.createElement("p")
+    text.id = "result"
+    text.innerHTML = "Approximate Gross Pay: "
+    text.style = "font-weight: bold; font-style: italic"
 
-    let text_italic = document.createElement("i")
-    text_italic.innerHTML = "Approximate Gross Pay: "
-    text.appendChild(text_italic)
-
-
-    let text2 = document.createElement()
     result.appendChild(text)
+
+    let text2 = document.createElement("p")
+    text2.id = "pay"
+    text2.innerHTML = ("€" + pay)
+
+    result.appendChild(text2)
 }
 
-/**
- * <p>
- * <i>
- * <strong>
- * </strong>
- * </i>
- * </p>
- **/
 </script>
 
 </html>
