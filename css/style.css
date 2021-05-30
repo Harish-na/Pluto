@@ -5,6 +5,7 @@
 }
 
 
+
 #main-container
 {
     padding-top: 10rem;
@@ -14,11 +15,13 @@
 }
 
 
+
 #card
 {
     width: 40%;
     height: 30rem;
 }
+
 
 
 #card-content
@@ -30,15 +33,17 @@
 }
 
 
+
 #money-icon
 {
     width: 9%;
 }
 
 
+
 #form-container
 {
-    margin-top: 2rem;
+    margin-top: 0.3rem;
     width: 15rem;
 }
 
@@ -46,9 +51,11 @@
 
 #button-container
 {
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
 }
+
 
 
 #gross-pay-container
