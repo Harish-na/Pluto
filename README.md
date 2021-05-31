@@ -9,3 +9,8 @@ Screenshots:
 
 Website link: [https://harish-na.github.io/Pluto/](https://harish-na.github.io/Pluto/)
 
+***
+### Disclaimer
+**WARNING!!** Users are welcome to reference the material present in this repository however, they are forbidden to copy my work and doing so will be considered plagiarism. All my work has been published online under my name and those who plagiarise my work will be doing so at their own risk and interest.
+
+
