@@ -5,5 +5,7 @@ A very light weight application to calculate an individuals gross pay based of t
 This application was designed to help me calculate my gross pay during my time in IKEA Dublin as a sales co-worker. It minimised the need to manually track the shifts I had worked and drastically reduced the time that is needed to calculate ones gross pay.
 
 Screenshots: 
+![Main page](readme_files/main.PNG "Main Page")
+
 Website link: [https://harish-na.github.io/Pluto/](https://harish-na.github.io/Pluto/)
 
