@@ -84,6 +84,19 @@ function getPay()
     let nines = parseInt(document.getElementById('nine-hours').value)
 
 
+    if(Number.isNaN(fours))
+    {
+        fours = 0
+    }
+    else if(Number.isNaN(sixes))
+    {
+        sixes = 0
+    }
+    else if(Number.isNaN(nines))
+    {
+        nines = 0
+    }
+
     let four_pay = (fours * 4) * hourly_rate
     let six_pay = (sixes * 6) * hourly_rate
     let nine_pay = (nines * 8) * hourly_rate
