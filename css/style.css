@@ -1,8 +1,4 @@
 
-#body
-{
-    background-image: linear-gradient(to right, #373B44, #4286f4);
-}
 
 
 
@@ -21,6 +17,7 @@
     width: 40%;
     height: 30rem;
     border-radius: 20px;
+    background-color: #00a8ff;
 }
 
 
