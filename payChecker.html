@@ -1,159 +1,158 @@
 <html>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
-<title>Pay Checker</title>
-
-
-
-<body id='body'>
-    <div class="container" style="width: 50%; border: solid black 1px; margin-top: 2rem;">
-        <div class="tabs is-centered is-boxed">
-            <ul>
-            <li class="is-active">
-                <a>
-                <span class="icon is-small"><i class="fa fa-euro-sign" aria-hidden="true"></i></span>
-                <span>Pay Checker</span>
-                </a>
-            </li>
-            <li>
-                <a>
-                <span class="icon is-small"><i class="fa fa-cut" aria-hidden="true"></i></span>
-                <span>Article Format</span>
-                </a>
-            </li>
-            <li>
-                <a>
-                <span class="icon is-small"><i class="fa fa-cubes" aria-hidden="true"></i></span>
-                <span>Low Level</span>
-                </a>
-            </li>
-            </ul>
-        </div>
-    </div>
-    <div class="container" id="main-container">
-        <div class="card" id="card">
-            <div class="card-content" id="card-content">
-                <div class="content">
-                    <strong>PAY CHECKER </strong><img src="img/money.svg" id="money-icon">
-                </div>
-            </div>
-
-            <div class="container" id="form-container">
-                <div class="field">
-                    <p><strong>Hourly Rate</strong></p>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Hourly Rate" id="hourly-rate">
-                    </div>
-                </div>
+    <title>
+        Pay Checker
+    </title>
 
 
-                <div class="field">
-                    <p><strong>4 Hour Shifts:</strong></p>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="4 Hour Shifts" id="four-hours">
-                    </div>
-                </div>
 
-                <div class="field">
-                    <p><strong>6 Hour Shifts:</strong></p>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="6 Hour Shifts" id="six-hours">
-                    </div>
-                </div>
-
-                <div class="field">
-                    <p><strong>9 Hour Shifts:</strong></p>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="9 Hour Shifts" id="nine-hours">
-                    </div>
-                </div>
-
-                <div class="container" id="button-container">
-                    <button class="button is-link" id="button">Calculate</button>
-                </div>
-                
-                <div class="container" id="gross-pay-container">
-
-                </div>
+    <body id='body'>
+        <div class="container" style="width: 50%; border: solid black 1px; margin-top: 2rem;">
+            <div class="tabs is-centered is-boxed">
+                <ul>
+                <li class="is-active">
+                    <a>
+                    <span class="icon is-small"><i class="fa fa-euro-sign" aria-hidden="true"></i></span>
+                    <span>Pay Checker</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="articleSplit.html">
+                    <span class="icon is-small"><i class="fa fa-cut" aria-hidden="true"></i></span>
+                    <span>Article Format</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="lowLevel.html">
+                    <span class="icon is-small"><i class="fa fa-cubes" aria-hidden="true"></i></span>
+                    <span>Low Level</span>
+                    </a>
+                </li>
+                </ul>
             </div>
         </div>
-    </div>
-</body>
+        <div class="container" id="main-container">
+            <div class="card" id="card">
+                <div class="card-content" id="card-content">
+                    <div class="content">
+                        <strong>PAY CHECKER </strong><img src="img/money.svg" id="money-icon">
+                    </div>
+                </div>
+
+                <div class="container" id="form-container">
+                    <div class="field">
+                        <p><strong>Hourly Rate</strong></p>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Hourly Rate" id="hourly-rate">
+                        </div>
+                    </div>
+
+
+                    <div class="field">
+                        <p><strong>4 Hour Shifts:</strong></p>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="4 Hour Shifts" id="four-hours">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <p><strong>6 Hour Shifts:</strong></p>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="6 Hour Shifts" id="six-hours">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <p><strong>9 Hour Shifts:</strong></p>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="9 Hour Shifts" id="nine-hours">
+                        </div>
+                    </div>
+
+                    <div class="container" id="button-container">
+                        <button class="button is-link" id="button">Calculate</button>
+                    </div>
+                    
+                    <div class="container" id="gross-pay-container">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 
 
 
-<script>
+    <script>
+        let button = document.getElementById('button')
+        button.addEventListener("click", function()
+        {
+            let pay = getPay()
+
+            let res = document.getElementById("result")
+            
+            if (res == null){
+                changeFormat(pay)
+            }
+        })
 
 
-
-let button = document.getElementById('button')
-button.addEventListener("click", function()
-{
-    let pay = getPay()
-
-    let res = document.getElementById("result")
-    
-    if (res == null){
-        changeFormat(pay)
-    }
-})
+        function getPay()
+        {
+            let hourly_rate = parseFloat(document.getElementById('hourly-rate').value)
+            let fours = parseInt(document.getElementById('four-hours').value)
+            let sixes = parseInt(document.getElementById('six-hours').value)
+            let nines = parseInt(document.getElementById('nine-hours').value)
 
 
-function getPay()
-{
-    let hourly_rate = parseFloat(document.getElementById('hourly-rate').value)
-    let fours = parseInt(document.getElementById('four-hours').value)
-    let sixes = parseInt(document.getElementById('six-hours').value)
-    let nines = parseInt(document.getElementById('nine-hours').value)
+            if(Number.isNaN(fours))
+            {
+                fours = 0
+            }
+            else if(Number.isNaN(sixes))
+            {
+                sixes = 0
+            }
+            else if(Number.isNaN(nines))
+            {
+                nines = 0
+            }
+
+            let four_pay = (fours * 4) * hourly_rate
+            let six_pay = (sixes * 6) * hourly_rate
+            let nine_pay = (nines * 8) * hourly_rate
+
+            let gross_pay = four_pay + six_pay + nine_pay
+
+            return gross_pay.toFixed(2)
+        }
 
 
-    if(Number.isNaN(fours))
-    {
-        fours = 0
-    }
-    else if(Number.isNaN(sixes))
-    {
-        sixes = 0
-    }
-    else if(Number.isNaN(nines))
-    {
-        nines = 0
-    }
+        function changeFormat(pay)
+        {
+            let card = document.getElementById('card')
+            card.style = "height: 35rem"
 
-    let four_pay = (fours * 4) * hourly_rate
-    let six_pay = (sixes * 6) * hourly_rate
-    let nine_pay = (nines * 8) * hourly_rate
+            let result = document.getElementById('gross-pay-container')
 
-    let gross_pay = four_pay + six_pay + nine_pay
+            let text = document.createElement("p")
+            text.id = "result"
+            text.innerHTML = "Approximate Gross Pay: "
+            text.style = "font-weight: bold; font-style: italic"
 
-    return gross_pay.toFixed(2)
-}
+            result.appendChild(text)
 
+            let text2 = document.createElement("p")
+            text2.id = "pay"
+            text2.innerHTML = ("€" + pay)
 
-function changeFormat(pay)
-{
-    let card = document.getElementById('card')
-    card.style = "height: 35rem"
+            result.appendChild(text2)
+        }
 
-    let result = document.getElementById('gross-pay-container')
-
-    let text = document.createElement("p")
-    text.id = "result"
-    text.innerHTML = "Approximate Gross Pay: "
-    text.style = "font-weight: bold; font-style: italic"
-
-    result.appendChild(text)
-
-    let text2 = document.createElement("p")
-    text2.id = "pay"
-    text2.innerHTML = ("€" + pay)
-
-    result.appendChild(text2)
-}
-
-</script>
+    </script>
 
 </html>
 
