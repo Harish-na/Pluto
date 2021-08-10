@@ -1,11 +1,22 @@
-## Pluto - Pay Checker 📈
+## Pluto
 
-A very light weight application to calculate an individuals gross pay based of their hourly pay rate and number of shifts worked over a certain period of time. 
+This application consists of 2 smaller applications. They are as follows: 
 
-This application was designed to help me calculate my gross pay during my time in IKEA Dublin as a sales co-worker. It minimised the need to manually track the shifts I had worked and drastically reduced the time that is needed to calculate ones gross pay.
+### Pay Checker 📈
+
+A very light weight application designed to calculate an individuals gross pay based of their hourly pay rate and number of shifts worked over a certain period of time. It minimised the need to manually track the shifts I had worked and drastically reduced the time that is needed to calculate ones gross pay. This application came in handy during my time as a Sales Co-Worker at IKEA Dublin. 
+
 
 Screenshots: 
-![Main page](readme_files/main.PNG "Main Page")
+![Pay Checker Page](readme_files/pay_check.PNG "Pay Checker Page")
+
+
+### Article Number Formatter ✂️
+
+A simple yet helpful application designed to format a given article number. Many of the systems I used at my workplace didn't always support the full stops that accompanied all article numbers. This application removes any full stops present in an article number reducing the need to manually remove them.
+
+Screenshots: 
+![Article Format Page](readme_files/article_split.PNG "Article Split Page")
 
 Website link: [https://harish-na.github.io/Pluto/](https://harish-na.github.io/Pluto/)
 
